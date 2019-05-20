@@ -14,7 +14,7 @@ opencv_python==3.4.4.19
 
 ## Spustenie dema
 
-V zlože code sa nachádza súbor demo.py, ktorý spustí detekciu nad 10 obrázkami zo zložky images. Pre každý z obrázkov zobrazí ohraničujúce boxy s číslom triedy.
+V zlože code sa nachádza súbor demo.py, ktorý spustí detekciu nad 10 obrázkami zo zložky images. Pre každý z obrázkov zobrazí ohraničujúce boxy s číslom triedy. A na štandardný výstup pošle údaje z detekcie.
 
 Spustenie:
 ```
