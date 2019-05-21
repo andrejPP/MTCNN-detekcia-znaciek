@@ -1,6 +1,6 @@
 # Detekcia značiek modelom MTCNN
 
-Tento repozitár obsahuje výsledok mojej bakalárskej práce, detektor značiek založený na kaskádovom modeli 
+Tento repozitár obsahuje výsledok mojej bakalárskej práce, detekcia značiek kaskádovým modelom convolučných neurónových sietí MTCNN. Pôvodná implementácia MTCNN pre detekciu tvárí je dostupná v nasledujúcom repositáry https://github.com/kpzhang93/MTCNN_face_detection_alignment. 
 
 
 ## Závislosti
