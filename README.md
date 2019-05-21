@@ -41,7 +41,7 @@ Príklad výstupu s dvomi detekovanými značkami triedy 11 a 18:
 POZOR !!!
 V súčasnej implementácii ak nedetekuje žiadnu značku v prvej alebo druhej fáze, vývolá ```ValueError``` výnimku,  a to na riadkoch  113, 162 modulu mtcnn.py.
 
-## Detekované triedy značiek
+## Triedy značiek
 <table>
 <tr></tr>
 <tr><td>
