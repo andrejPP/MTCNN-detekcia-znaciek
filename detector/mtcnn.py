@@ -264,13 +264,12 @@ class MTCNN:
 
     def _create_bounding_boxes(self, class_scoore_map, box_regression, scale, threshold):
         """
-        So how it works ? We got input from our first network.
         Parameter class_scoore_map represent probability of sign being inside
         feature. Lets say ouput has 20 features. Each feature represent one NxN(self._min_detect_size)
         part of image. We can easily calculate how many features picture has,
         based on image size and strides inside net. Now when we know all of this
         we can create boundin boxes. We use threshold because we don't care about
-        features with low probability of finding image.
+        features with low probability of finding sign.
         """
         stride = 2
         indicies = np.where(class_scoore_map>=threshold)
