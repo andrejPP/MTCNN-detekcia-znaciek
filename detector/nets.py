@@ -57,8 +57,7 @@ class FirstNet(nn.Module):
     def stride(self):
         pass
 
-
-
+    
 class SecondNet(nn.Module):
 
     def __init__(self, classification_mode, channels):
@@ -75,11 +74,6 @@ class SecondNet(nn.Module):
             nn.Conv2d(48,64,2),
             nn.PReLU()
         )
-        # self.first_conv = nn.Conv2d(3,28,3, bias=False)
-        # self.second_conv = nn.Conv2d(28,48,3, bias=False)
-        # self.third_conv = nn.Conv2d(48,64,2, bias=False)
-        # self.pool_layer = nn.MaxPool2d(3,2)
-        # self.activision = nn.PReLU()
 
         self.fully_connected = nn.Sequential(
             nn.Linear(3*3*64,128),
@@ -89,15 +83,10 @@ class SecondNet(nn.Module):
         self.fc2 = nn.Linear(128,4)
 
     def forward(self, data):
-
         output = self.convolutional(data)
-        # print(output.size())
         output = output.view(-1,3*3*64)
-        # print(output.size())
         output = self.fully_connected(output)
         class_map = self.fc1(output)
-        # print(class_map.size())
-        # print(class_map)
         boxes_reg = self.fc2(output)
 
         return class_map, boxes_reg
@@ -137,9 +126,3 @@ class LastNet(nn.Module):
         boxes_reg = self.fc2(output)
 
         return class_map, boxes_reg
-
-#if __name__ == "__main__":
-#    first = FirstNet("binary", 1)
-#    summary(first, (1,12,12))
-#    first = FirstNet("binary", 1)
-#    summary(first, (1,12,12))
