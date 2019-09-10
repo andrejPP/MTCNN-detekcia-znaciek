@@ -47,16 +47,10 @@ class FirstNet(nn.Module):
 
     def forward(self, data):
         output = self.main_model(data)
-        #use softmax on dimension no. 1 which is channel dimension
         class_map = self.clasifier(output)
-        # class_map = F.softmax(self.clasifier(output), dim=1)
         boxes_reg = self.bounding_box_regression(output)
 
         return class_map, boxes_reg
-
-    def stride(self):
-        pass
-
     
 class SecondNet(nn.Module):
 
