@@ -25,13 +25,14 @@ from third_party_library import non_max_suppression
 def draw_only_positive(image, g_truth, boxes, score=None):
 
     pos, sign_coor = whats_inside(ground_truths=g_truth, rois=boxes, threshold=0.5)
-
     draw_all(image, boxes[pos,:], score)
 
+    
 def draw_all(image, boxes, score=None, class_num=None):
 
     show_image(draw_boxes((image-127.5)/127.5, boxes[:,0:4], class_num=class_num, score=score, blue=255, green=0, red=0))
 
+    
 class MTCNN:
     """
     Main detector object running whole process of detection
@@ -208,10 +209,7 @@ class MTCNN:
 
         #draw_all(image_proc.full_image(), all_boxes[:,0:4], all_boxes[:,4], all_boxes[:,5])
         return all_boxes
-
-        
-
-
+    
 
     def extract_output_samples(self, image, sign_info, layer, path, mode):
         """
