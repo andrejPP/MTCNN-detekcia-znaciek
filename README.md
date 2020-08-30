@@ -18,7 +18,7 @@ V zlože detector sa nachádza súbor demo.py, ktorý spustí detekciu nad 10 ob
 
 Spustenie:
 ```
-python3 demo.py
+python3 run_detection.py
 ```
 
 ## Výstup metódy detector
