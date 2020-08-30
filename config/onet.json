@@ -1,0 +1,12 @@
+{
+    "net" : "third",
+    "epochs_num" : 35,
+    "batch_size" : 128,
+    "class-mode" : "multi",
+    "dataset": "rnet_merge",
+    "base_lr" : 0.005,
+    "max_lr" : 0.015,
+    "cycle" : 3,
+    "classification_weight" : 1,
+    "regression_weight" : 1
+}
